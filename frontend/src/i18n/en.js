@@ -4,7 +4,8 @@ export default {
   login: {
     title: 'Login recently',
     desc: 'Click on your photo or add account',
-    withFacebook: 'Login Facebook'
+    withFacebook: 'Login Facebook',
+    empty: "Can't be left empty"
   },
 
   loginText: 'Login',
