@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '@/components/Button/Button';
-import useHookForm from '@/hooks/useForm';
+import useHookForm from '@/hooks/useHookForm';
 import InputField from '@/components/FormControls/InputField/InputField';
 import Loading from '@/components/Loading/Loading';
 import CheckboxField from '@/components/FormControls/CheckboxField/CheckboxField';

@@ -5,6 +5,7 @@ const useHookForm = () => {
   const [disabled, setDisabled] = useState(false);
 
   const {
+    control,
     register,
     handleSubmit,
     watch,
