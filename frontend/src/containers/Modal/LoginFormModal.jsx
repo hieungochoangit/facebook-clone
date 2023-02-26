@@ -4,16 +4,20 @@ import { Link } from 'react-router-dom';
 import { GrClose } from 'react-icons/gr';
 
 import useModal from '../../hooks/useModal';
+import Button from '../../components/Button/Button';
+import LoginForm from '../Form/LoginForm/LoginForm';
 
 const LoginFormModal = () => {
   const { isShowing, toggle } = useModal();
 
   return (
     <>
-      <button onClick={toggle}>Loggin</button>
+      <Button className="bg-[#1877f2] h-10 min-w-[120px] rounded-sm text-white my-4" onClick={toggle}>
+        Đăng nhập
+      </Button>
 
       <Modal isShowing={isShowing} hide={toggle} header={<HeaderModal hide={toggle} />} footer={<FooterModal />}>
-        Hello
+        <LoginForm />
       </Modal>
     </>
   );
