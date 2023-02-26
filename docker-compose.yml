@@ -6,6 +6,7 @@ services:
     build: "./frontend"
     volumes:
       - ./frontend:/var/app/frontend
+      - /var/app/frontend/node_modules
     tty: true
     ports:
       - 3001:5173
