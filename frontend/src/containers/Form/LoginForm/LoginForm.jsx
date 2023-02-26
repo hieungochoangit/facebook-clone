@@ -4,12 +4,14 @@ import useHookForm from '@/hooks/useForm';
 import InputField from '@/components/FormControls/InputField/InputField';
 import Loading from '@/components/Loading/Loading';
 import CheckboxField from '@/components/FormControls/CheckboxField/CheckboxField';
+import { useTranslation } from 'react-i18next';
 
 const validateField = {
   required: true
 };
 
 const LoginForm = () => {
+  const { t } = useTranslation();
   const {
     register,
     handleSubmit,
@@ -24,7 +26,7 @@ const LoginForm = () => {
       <InputField field="email" register={register} validateField={validateField} errors={errors} type="text" />
       <InputField field="password" register={register} validateField={validateField} errors={errors} type="password" />
       <CheckboxField field="savepass" register={register} className="mb-2">
-        Nhớ mật khẩu
+        {t('savePassword')}
       </CheckboxField>
       <Button
         disabled={disabled}
@@ -32,7 +34,7 @@ const LoginForm = () => {
         type="submit"
         className="bg-[#1877f2] h-10 w-full rounded-sm text-white my-4"
       >
-        {disabled ? <Loading /> : 'Đăng nhập'}
+        {disabled ? <Loading /> : t('loginText')}
       </Button>
     </form>
   );
