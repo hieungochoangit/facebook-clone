@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
+import SignInScreen from '../../configs/firebase';
 import LoginFormModal from '../../containers/Modal/LoginFormModal';
 
 const Login = () => {
@@ -11,7 +12,7 @@ const Login = () => {
       <Helmet>
         <title>{t('loginText')}</title>
       </Helmet>
-      <div className="container h-[720px] bg-[#f0f2f5] flex items-center justify-center">
+      <div className="container h-[720px] bg-[#f0f2f5] flex items-center justify-center gap-20">
         <div>
           <img className="h-[70px] -mx-5" src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="logo" />
 
@@ -19,6 +20,9 @@ const Login = () => {
           <p className="text-[15px]">{t('login.desc')}</p>
 
           <LoginFormModal />
+        </div>
+        <div>
+          <SignInScreen />
         </div>
       </div>
     </>
