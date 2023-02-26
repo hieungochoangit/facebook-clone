@@ -6,14 +6,16 @@ import { GrClose } from 'react-icons/gr';
 import useModal from '../../hooks/useModal';
 import Button from '../../components/Button/Button';
 import LoginForm from '../Form/LoginForm/LoginForm';
+import { useTranslation } from 'react-i18next';
 
 const LoginFormModal = () => {
   const { isShowing, toggle } = useModal();
+  const { t } = useTranslation();
 
   return (
     <>
       <Button className="bg-[#1877f2] h-10 min-w-[120px] rounded-sm text-white my-4" onClick={toggle}>
-        Đăng nhập
+        {t('loginText')}
       </Button>
 
       <Modal isShowing={isShowing} hide={toggle} header={<HeaderModal hide={toggle} />} footer={<FooterModal />}>
@@ -24,9 +26,11 @@ const LoginFormModal = () => {
 };
 
 const HeaderModal = ({ hide }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="h-[50px] border-b flex items-center justify-center relative">
-      <span>Đăng nhập Facebook</span>
+      <span>{t('login.withFacebook')}</span>
       <span onClick={hide} className="absolute right-4 cursor-pointer">
         <GrClose />
       </span>
@@ -35,9 +39,11 @@ const HeaderModal = ({ hide }) => {
 };
 
 const FooterModal = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="py-4 text-[#1877f2] text-[17px]">
-      <Link to="forgot-password">Quên mật khẩu?</Link>
+      <Link to="forgot-password">{t('forgotPassword')}</Link>
     </div>
   );
 };
