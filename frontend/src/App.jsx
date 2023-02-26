@@ -1,17 +1,12 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import "./App.css";
+import routers from '@/routers';
+import { useState } from 'react';
+import { useRoutes } from 'react-router-dom';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const routing = useRoutes(routers(isLoggedIn));
 
-  return (
-    <div className="App">
-      <h1 className="text-5xl font-bold underline text-[green]">
-        Hello world!
-      </h1>
-    </div>
-  );
+  return <>{routing}</>;
 }
 
 export default App;
