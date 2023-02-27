@@ -2,6 +2,17 @@
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    colors: {
+      primary: '#1877f2',
+      primaryHover: '#166fe5',
+      borderColor: '#CCC',
+      white: '#FFFFFF',
+      black: '#000000',
+      midnight: '#121063',
+      slate: '#f1f5f9',
+      pink: '#fbcfe8',
+      transparent: 'transparent'
+    },
     extend: {},
     screens: {
       sm: '640px',

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CheckboxField = (props) => {
-  const { children, field, register, ...rest } = props;
+  const { children, field, register, errors, ...rest } = props;
 
   return (
     <div {...rest}>
