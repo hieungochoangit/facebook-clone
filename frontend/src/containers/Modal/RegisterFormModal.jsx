@@ -15,7 +15,10 @@ const RegisterFormModal = () => {
 
   return (
     <>
-      <Button className="bg-[#1877f2] h-10 min-w-[120px] rounded-sm text-white my-4" onClick={toggle}>
+      <Button
+        className="bg-primary hover:bg-primaryHover text-white font-semibold h-10 min-w-[120px] rounded-sm my-4"
+        onClick={toggle}
+      >
         {t('registerText')}
       </Button>
 

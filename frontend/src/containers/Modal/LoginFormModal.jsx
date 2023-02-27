@@ -14,7 +14,10 @@ const LoginFormModal = () => {
 
   return (
     <>
-      <Button className="bg-[#1877f2] h-10 min-w-[120px] rounded-sm text-white my-4" onClick={toggle}>
+      <Button
+        className="bg-primary hover:bg-primaryHover text-white font-semibold h-10 min-w-[120px] rounded-sm  my-4"
+        onClick={toggle}
+      >
         {t('loginText')}
       </Button>
 
@@ -42,7 +45,7 @@ const FooterModal = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="py-4 text-[#1877f2] text-[17px]">
+    <div className="py-4 text-primary text-[17px]">
       <Link to="forgot-password">{t('forgotPassword')}</Link>
     </div>
   );
