@@ -13,21 +13,27 @@ const Login = () => {
       <Helmet>
         <title>{t('loginText')}</title>
       </Helmet>
-      <div className="container h-[720px] bg-[#f0f2f5] flex items-center justify-center gap-20 flex-col">
-        <div>
-          <img className="h-[70px] -mx-5" src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="logo" />
+      <div className="container h-screen bg-transparent pt-20">
+        <div className="flex items-center justify-center gap-10 flex-col bg-white w-max mx-auto p-10 rounded-xl shadow-xl">
+          <div>
+            <img
+              className="h-[70px] mx-auto"
+              src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg"
+              alt="logo"
+            />
 
-          <h2 className="text-[28px]">{t('login.title')}</h2>
-          <p className="text-[15px]">{t('login.desc')}</p>
+            <h2 className="text-[28px] text-center">{t('login.title')}</h2>
+            <p className="text-[15px] text-center">{t('login.desc')}</p>
 
-          <div className="flex items-center justify-between">
-            <LoginFormModal />
-            <RegisterFormModal />
+            <div className="flex items-center justify-between">
+              <LoginFormModal />
+              <RegisterFormModal />
+            </div>
           </div>
-        </div>
-        <div>{t('or')}</div>
-        <div>
-          <LoginWithSocial />
+          <div>{t('or')}</div>
+          <div>
+            <LoginWithSocial />
+          </div>
         </div>
       </div>
     </>
