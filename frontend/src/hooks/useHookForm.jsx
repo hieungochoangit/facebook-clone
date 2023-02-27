@@ -1,9 +1,8 @@
 import { useCallback, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { loginSchema } from '@/validations/loginSchema';
 import { yupResolver } from '@hookform/resolvers/yup';
 
-const useHookForm = () => {
+const useHookForm = (schema) => {
   const [disabled, setDisabled] = useState(false);
 
   const {
@@ -13,7 +12,7 @@ const useHookForm = () => {
     watch,
     formState: { errors }
   } = useForm({
-    resolver: yupResolver(loginSchema)
+    resolver: yupResolver(schema)
   });
 
   const onClickSubmit = useCallback((data) => {

@@ -5,6 +5,7 @@ import InputField from '@/components/FormControls/InputField/InputField';
 import Loading from '@/components/Loading/Loading';
 import CheckboxField from '@/components/FormControls/CheckboxField/CheckboxField';
 import { useTranslation } from 'react-i18next';
+import { loginSchema } from '@/validations/loginSchema';
 
 const validateField = {
   required: true
@@ -19,7 +20,7 @@ const LoginForm = () => {
     formState: { errors },
     onClickSubmit,
     disabled
-  } = useHookForm();
+  } = useHookForm(loginSchema);
 
   return (
     <form onSubmit={handleSubmit(onClickSubmit)} className="px-6 pt-4">

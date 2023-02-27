@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import LoginWithSocial from '@/components/LoginWithSocial/LoginWithSocial';
 import LoginFormModal from '@/containers/Modal/LoginFormModal';
+import RegisterFormModal from '@/containers/Modal/RegisterFormModal';
 
 const Login = () => {
   const { t } = useTranslation();
@@ -19,7 +20,10 @@ const Login = () => {
           <h2 className="text-[28px]">{t('login.title')}</h2>
           <p className="text-[15px]">{t('login.desc')}</p>
 
-          <LoginFormModal />
+          <div className="flex items-center justify-between">
+            <LoginFormModal />
+            <RegisterFormModal />
+          </div>
         </div>
         <div>{t('or')}</div>
         <div>
