@@ -34,7 +34,7 @@ const RegisterForm = () => {
         disabled={disabled}
         style={{ backgroundColor: disabled ? '#CCC' : '' }}
         type="submit"
-        className="bg-[#1877f2] h-10 w-full rounded-sm text-white my-4"
+        className="bg-primary hover:bg-primaryHover h-10 w-full rounded-sm text-white my-4"
       >
         {disabled ? <Loading /> : t('registerText')}
       </Button>

@@ -14,7 +14,7 @@ const RegisterFormModal = () => {
   const { t } = useTranslation();
 
   return (
-    <>
+    <div>
       <Button
         className="bg-primary hover:bg-primaryHover text-white font-semibold h-10 min-w-[120px] rounded-sm my-4"
         onClick={toggle}
@@ -25,7 +25,7 @@ const RegisterFormModal = () => {
       <Modal isShowing={isShowing} hide={toggle} header={<HeaderModal hide={toggle} />} footer={<FooterModal />}>
         <RegisterForm />
       </Modal>
-    </>
+    </div>
   );
 };
 
@@ -33,7 +33,7 @@ const HeaderModal = ({ hide }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="h-[50px] border-b flex items-center justify-center relative">
+    <div className="h-[50px] border-b border-borderColor flex items-center justify-center relative">
       <span>{t('registerText')}</span>
       <span onClick={hide} className="absolute right-4 cursor-pointer">
         <GrClose />

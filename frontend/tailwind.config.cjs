@@ -5,6 +5,7 @@ module.exports = {
     colors: {
       primary: '#1877f2',
       primaryHover: '#166fe5',
+      borderColor: '#CCC',
       white: '#FFFFFF',
       black: '#000000',
       midnight: '#121063',

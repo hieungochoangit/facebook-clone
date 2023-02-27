@@ -11,7 +11,7 @@ const InputField = (props) => {
       <input
         {...register(field, { ...validateField })}
         placeholder={`Nhập vào ${field} của bạn`}
-        className={`border outline-0 p-2 w-full rounded-sm ${errors[field] ? 'border-[red]' : ''}`}
+        className={`border border-borderColor outline-0 p-2 w-full rounded-sm ${errors[field] ? 'border-[red]' : ''}`}
         type="text"
         {...rest}
       />

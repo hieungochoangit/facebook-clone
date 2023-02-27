@@ -13,7 +13,7 @@ const Modal = ({ isShowing, hide, children, header, footer }) =>
             tabIndex={-1}
             role="dialog"
           >
-            <div className="mx-auto">
+            <div className="mx-auto shadow-2xl">
               <div className="modal-header">{header}</div>
               <div className="modal-content">{children}</div>
               <div className="modal-footer">{footer}</div>

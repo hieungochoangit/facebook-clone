@@ -32,7 +32,7 @@ const HeaderModal = ({ hide }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="h-[50px] border-b flex items-center justify-center relative">
+    <div className="h-[50px] border-b border-borderColor flex items-center justify-center relative">
       <span>{t('login.withFacebook')}</span>
       <span onClick={hide} className="absolute right-4 cursor-pointer">
         <GrClose />
