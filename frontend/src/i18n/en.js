@@ -9,7 +9,9 @@ export default {
   },
 
   loginText: 'Login',
+  registerText: 'Register',
   forgotPassword: 'Forgot password?',
   savePassword: 'Save password',
-  or: 'Or'
+  or: 'Or',
+  confirmTerm: 'I agree to the terms of the social network'
 };

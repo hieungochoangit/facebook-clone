@@ -9,7 +9,9 @@ export default {
   },
 
   loginText: 'Đăng nhập',
+  registerText: 'Đăng ký',
   forgotPassword: 'Quyên mật khẩu?',
   savePassword: 'Nhớ mật khẩu',
-  or: 'Hoặc'
+  or: 'Hoặc',
+  confirmTerm: 'Tôi đồng ý với điểu khoản của mạng xã hội'
 };
