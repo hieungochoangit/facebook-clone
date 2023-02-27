@@ -10,5 +10,6 @@ export default {
 
   loginText: 'Đăng nhập',
   forgotPassword: 'Quyên mật khẩu?',
-  savePassword: 'Nhớ mật khẩu'
+  savePassword: 'Nhớ mật khẩu',
+  or: 'Hoặc'
 };

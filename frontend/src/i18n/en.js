@@ -10,5 +10,6 @@ export default {
 
   loginText: 'Login',
   forgotPassword: 'Forgot password?',
-  savePassword: 'Save password'
+  savePassword: 'Save password',
+  or: 'Or'
 };
