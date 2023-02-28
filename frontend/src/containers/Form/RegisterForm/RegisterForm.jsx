@@ -3,9 +3,9 @@ import Button from '@/components/Button/Button';
 import useHookForm from '@/hooks/useHookForm';
 import InputField from '@/components/FormControls/InputField/InputField';
 import Loading from '@/components/Loading/Loading';
-import CheckboxField from '@/components/FormControls/CheckboxField/CheckboxField';
 import { useTranslation } from 'react-i18next';
 import { registerSchema } from '@/validations/registerSchema';
+import BirthdayGroup from '@/containers/BirthdayGroup/BirthdayGroup';
 
 const validateField = {
   required: true
@@ -24,12 +24,21 @@ const RegisterForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onClickSubmit)} className="px-6 pt-4">
-      <InputField field="email" register={register} validateField={validateField} errors={errors} type="text" />
+      <div className="flex items-center gap-4">
+        <InputField field="surname" register={register} validateField={validateField} errors={errors} type="text" />
+        <InputField field="lastname" register={register} validateField={validateField} errors={errors} type="text" />
+      </div>
+      <InputField
+        field="phoneOrEmail"
+        register={register}
+        validateField={validateField}
+        errors={errors}
+        type="password"
+      />
       <InputField field="password" register={register} validateField={validateField} errors={errors} type="password" />
-      <InputField field="rpassword" register={register} validateField={validateField} errors={errors} type="password" />
-      <CheckboxField field="confirmTerm" register={register} className="mb-2">
-        {t('confirmTerm')}
-      </CheckboxField>
+
+      <BirthdayGroup register={register} />
+
       <Button
         disabled={disabled}
         style={{ backgroundColor: disabled ? '#CCC' : '' }}
