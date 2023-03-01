@@ -10,7 +10,7 @@ const InputField = (props) => {
     <div className="my-2">
       <input
         {...register(field, { ...validateField })}
-        placeholder={`Nhập vào ${field} của bạn`}
+        placeholder={field}
         className={`border border-borderColor outline-0 p-2 w-full rounded-sm ${errors[field] ? 'border-[red]' : ''}`}
         type="text"
         {...rest}

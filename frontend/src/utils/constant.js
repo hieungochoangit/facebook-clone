@@ -3,3 +3,9 @@ export const BIRTHDAY_KEYS = {
   MONTH: 'month',
   YEAR: 'year'
 };
+
+export const GENDER_KEYS = {
+  MALE: 'male',
+  FEMALE: 'female',
+  OTHER: 'other'
+};

@@ -8,7 +8,7 @@ export const registerSchema = yup
     password: yup.string().required(),
     day: yup.string().required(),
     month: yup.string().required(),
-    year: yup.string().required()
-    // gender: yup.number().required()
+    year: yup.string().required(),
+    gender: yup.string().required()
   })
   .required();
