@@ -24,8 +24,22 @@ const LoginForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onClickSubmit)} className="px-6 pt-4">
-      <InputField field="email" register={register} validateField={validateField} errors={errors} type="text" />
-      <InputField field="password" register={register} validateField={validateField} errors={errors} type="password" />
+      <InputField
+        field="email"
+        placeholder={t('phoneOrEmail')}
+        register={register}
+        validateField={validateField}
+        errors={errors}
+        type="text"
+      />
+      <InputField
+        field="password"
+        placeholder={t('password')}
+        register={register}
+        validateField={validateField}
+        errors={errors}
+        type="password"
+      />
       <CheckboxField field="savepass" register={register} className="mb-2">
         {t('savePassword')}
       </CheckboxField>

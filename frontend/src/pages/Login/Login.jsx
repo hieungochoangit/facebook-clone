@@ -14,8 +14,8 @@ const Login = () => {
         <title>{t('loginText')}</title>
       </Helmet>
       <div className="container h-screen bg-transparent pt-20">
-        <div className="flex items-center justify-center gap-10 flex-col bg-white w-max mx-auto p-10 rounded-xl shadow-xl">
-          <div>
+        <div className="flex items-center justify-center gap-10 flex-col bg-white w-[370px] mx-auto p-10 rounded-xl shadow-xl">
+          <div className="w-full">
             <img
               className="h-[70px] mx-auto"
               src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg"
