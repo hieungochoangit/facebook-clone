@@ -13,3 +13,36 @@ services:
     environment:
       - CHOKIDAR_USEPOLLING=true
       - WATCHPACK_POLLING=true
+    networks:
+      - nestjs-networks
+
+  backend:
+    container_name: "backend"
+    build: "./backend"
+    volumes:
+      - ./backend:/var/app/backend
+      - /var/app/backend/node_modules
+    command: [sh, -c, "yarn start:dev"]
+    depends_on:
+      - mysql
+    ports:
+      - 3333:3000
+    networks:
+      - nestjs-networks
+  mysql:
+    container_name: "mysql"
+    image: mysql:8.0
+    restart: always
+    volumes:
+      - ./backend/data/conf.d:/etc/mysql/conf.d
+      - ./backend/data/logs:/logs
+      - ./backend/data/mysql:/var/lib/mysql
+    ports:
+      - 3309:3306
+    tty: true
+    environment:
+      MYSQL_ROOT_PASSWORD: "123456789"
+    networks:
+      - nestjs-networks
+networks:
+  nestjs-networks:
